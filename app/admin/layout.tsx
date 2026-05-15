@@ -1,9 +1,11 @@
-import React from 'react'
+import SideNav from "@/components/layout/SideNav";
+import { ReactNode } from "react";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+export default function AdminLayout({ children }: { children: ReactNode }) {
+    return (
+        <div className="flex min-h-screen">
+            <SideNav />
+            <main className="flex-1">{children}</main>
+        </div>
+    );
 }
-
-export default page
