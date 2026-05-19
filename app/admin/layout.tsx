@@ -1,5 +1,5 @@
-import SideNav from "@/components/layout/SideNav";
 import { ReactNode } from "react";
+import SideNav from "../components/layout/SideNav";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
     return (
@@ -9,3 +9,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
     );
 }
+
+
+

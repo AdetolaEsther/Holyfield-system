@@ -3,41 +3,47 @@ import { theme } from "./theme";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-export default function Home() { 
-  const features = [
-      {
-          icon: "material-symbols:cardiology-outline",
-          title: "Cardiology",
-          description:
-              "Advanced diagnostic and therapeutic heart care services including preventive screenings.",
-      },
-      {
-          icon: "lucide:brain",
-          title: "Neurology",
-          description:
-              "Expert care for complex neurological conditions using the latest medical breakthroughs.",
-      },
-      {
-          icon: "lucide-lab:bottle-baby",
-          title: "Pediatrics",
-          description:
-              "Compassionate and gentle care for your little ones, from infancy through adolescence.",
-      },
-      {
-          icon: "hugeicons:doctor-01",
-          title: "Diagnostics",
-          description:
-              "Precision imaging and laboratory services for accurate and rapid health assessments.",
-      },
-  ];
+export default function Home() {
+    const features = [
+        {
+            icon: "material-symbols:cardiology-outline",
+            title: "Cardiology",
+            description:
+                "Advanced diagnostic and therapeutic heart care services including preventive screenings.",
+        },
+        {
+            icon: "lucide:brain",
+            title: "Neurology",
+            description:
+                "Expert care for complex neurological conditions using the latest medical breakthroughs.",
+        },
+        {
+            icon: "lucide-lab:bottle-baby",
+            title: "Pediatrics",
+            description:
+                "Compassionate and gentle care for your little ones, from infancy through adolescence.",
+        },
+        {
+            icon: "hugeicons:doctor-01",
+            title: "Diagnostics",
+            description:
+                "Precision imaging and laboratory services for accurate and rapid health assessments.",
+        },
+    ];
     return (
         <div className="w-full flex flex-col">
             <div
                 id="home"
-                className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 pt-[80px] md:pt-[100px] px-3 md:px-[350px] pb-6 md:pb-[100px] text-center md:text-left"
+                className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 pt-6 md:pt-10 px-3 md:px-[350px] pb-6 md:pb-[40px] text-center md:text-left"
             >
-                <div className="flex-1 max-w-[700px] flex flex-col gap-3 items-center md:items-start">
+                <div className="flex-1 max-w-[700px] flex flex-col gap-3 items-start text-left">
                     <div className="bg-[#CFE2F9] text-[#351F89] px-2 py-2 rounded-[0.8rem] w-fit whitespace-nowrap text-[12px] inline-flex items-center font-medium">
+                        <Icon
+                            icon="material-symbols-light:verified-outline"
+                            width="18"
+                            height="18"
+                            color="#351F89"
+                        />
                         <span className="text-inherit">
                             TRUSTED BY 10,000+ PATIENTS
                         </span>
@@ -56,18 +62,19 @@ export default function Home() {
                         state- of-the-art facilities and compassionate
                         specialist care tailored to your family's needs.
                     </p>
-                    <div className="gap-4 flex">
+                    <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                        {" "}
                         <Link href="/book-appointment">
                             <button
                                 style={{
                                     backgroundColor: theme.colors.secondary,
                                 }}
-                                className="text-white text-sm px-6 py-2 rounded-lg"
+                                className="text-white text-sm px-6 py-3 rounded-lg w-full md:w-auto"
                             >
                                 Book Appointment
                             </button>
                         </Link>
-                        <button className=" text-sm px-6 py-2 rounded-lg flex items-center gap-2 border-2 border-[#5B5B5B] text-[#5B5B5B] hover:bg-[#5B5B5B] hover:text-white transition">
+                        <button className="text-sm px-6 py-3 rounded-lg flex items-center justify-center gap-2 border-2 border-[#5B5B5B] text-[#5B5B5B] hover:bg-[#5B5B5B] hover:text-white transition w-full md:w-auto">
                             <Icon
                                 icon="mdi:play-circle-outline"
                                 width="18"
@@ -158,7 +165,7 @@ export default function Home() {
 
             <div
                 id="about"
-                className="flex flex-col md:flex-row items-stretch justify-between gap-6 md:gap-10 pt-[80px] md:pt-[100px] px-3 md:px-[350px] pb-6 md:pb-[100px] text-center md:text-left"
+                className="flex flex-col-reverse md:flex-row items-stretch justify-between gap-6 md:gap-10 pt-[80px] md:pt-[100px] px-3 md:px-[350px] pb-6 md:pb-[100px] text-left"
             >
                 <div className="flex-1 flex items-center justify-center">
                     <div className="relative w-full max-w-[600px] h-full min-h-[500px] md:min-h-[600px]">
@@ -277,16 +284,17 @@ export default function Home() {
                 className="bg-[#BCCABC] text-[#5B5B5B] w-full py-16"
             >
                 <div className="max-w-[1000px] mx-auto px-4 md:px-6">
-                    <div className="flex flex-col md:flex-row justify-between gap-10 text-center md:text-left">
+                    <div className="flex flex-col md:flex-row justify-between gap-10 text-left">
+                        {" "}
                         <div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 justify-start">
+                                {" "}
                                 <Icon
                                     icon="streamline-plump:hospital-sign-square-remix"
                                     color={theme.colors.primary}
                                     width="24"
                                     height="24"
                                 />
-
                                 <h2
                                     className="font-bold text-lg"
                                     style={{ color: theme.colors.primary }}
@@ -303,7 +311,6 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-
                         <div className="mt-4 text-[14px] max-w-[300px]">
                             <h4 className="font-bold mb-3">Quick Links</h4>
 
@@ -314,7 +321,6 @@ export default function Home() {
                                 <p>Book Appointment</p>
                             </div>
                         </div>
-
                         <div className="mt-4 text-[14px] max-w-[300px]">
                             <h4 className="font-bold mb-3">Support</h4>
 
@@ -325,21 +331,22 @@ export default function Home() {
                                 <p>Privacy Policy</p>
                             </div>
                         </div>
-
                         <div className="mt-4 text-[14px] leading-6 max-w-[300px]">
                             <h4 className="font-bold mb-3">News Letter</h4>
                             <p>
                                 Stay updated with our latest medical news and
                                 tips.
                             </p>
-                            <div className="flex flex-col md:flex-row gap-3 mb-16">
+                            <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                                {" "}
                                 <input
                                     placeholder="example@email.com"
                                     className="w-full border border-gray-300 bg-white px-4 py-2 rounded-md text-black"
                                 />
-                                <button className=" flex items-center justify-center ">
+                                <button className="flex items-center justify-center w-full sm:w-auto">
+                                    {" "}
                                     <div
-                                        className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+                                        className="w-full sm:w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-transform hover:scale-110"
                                         style={{
                                             backgroundColor:
                                                 theme.colors.primary,
@@ -357,7 +364,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-400">
+                    <div className="flex flex-col items-start md:items-center justify-center gap-6 text-gray-400 mt-8 border-t border-gray-300 pt-6">
+                        {" "}
                         <p className="whitespace-nowrap">
                             © {new Date().getFullYear()} © Holyfield Medical
                             clinic. All rights reserved.

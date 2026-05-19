@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { AuthWrapper } from "@/components/layout/AuthWrapper";
+import { AuthWrapper } from "@/app/components/layout/AuthWrapper";
 
 const Page = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,9 +11,10 @@ const Page = () => {
 
     return (
         <AuthWrapper>
-            <div className="w-full flex flex-col items-center justify-center gap-8">
+            <div className="w-full flex flex-col items-center justify-center gap-6 px-4 md:px-0 min-h-screen overflow-hidden mb-20">
                 {" "}
-                <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-12 mb-8">
+                <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-gray-200 p-5 md:p-12 max-h-[85vh] overflow-hidden">
+                    {" "}
                     <div className="mb-8">
                         <h1 className="text-4xl font-semibold text-black">
                             Welcome back
@@ -23,7 +24,6 @@ const Page = () => {
                             Access your administrative dashboard.
                         </p>
                     </div>
-
                     <form className="flex flex-col gap-4">
                         <input
                             type="email"
@@ -70,7 +70,7 @@ const Page = () => {
                         <div className="flex flex-col items-center gap-4 mt-6">
                             <div className="w-full flex items-center gap-3">
                                 <div className="flex-1 h-px bg-gray-200" />
-                               <div className="flex-1 h-px bg-gray-200" />
+                                <div className="flex-1 h-px bg-gray-200" />
                             </div>
 
                             <p className="text-sm text-center text-gray-600">

@@ -45,13 +45,13 @@ const page = () => {
     const features = [
         {
             icon: "material-symbols:cardiology-outline",
-            title: "Total Patients",
+            title: "TOTAL RECORDS",
             description: "1,284",
             stats: "+12%",
         },
         {
             icon: "lucide:brain",
-            title: "Today's Patients",
+            title: "ACTIVE CASES",
             description: "21",
             stats: "Daily",
         },
@@ -89,6 +89,46 @@ const page = () => {
             status: "In Progress",
             image: "https://i.pravatar.cc/100?img=2",
         },
+        {
+            id: "PT-002",
+            patient: "Michael Lee",
+            phone: "+234 803 111 2222",
+            department: "Neurology",
+            doctor: "Dr. David",
+            time: "2026-05-20",
+            status: "In Progress",
+            image: "https://i.pravatar.cc/100?img=2",
+        },
+        {
+            id: "PT-002",
+            patient: "Michael Lee",
+            phone: "+234 803 111 2222",
+            department: "Neurology",
+            doctor: "Dr. David",
+            time: "2026-05-20",
+            status: "In Progress",
+            image: "https://i.pravatar.cc/100?img=2",
+        },
+        {
+            id: "PT-002",
+            patient: "Michael Lee",
+            phone: "+234 803 111 2222",
+            department: "Neurology",
+            doctor: "Dr. David",
+            time: "2026-05-20",
+            status: "In Progress",
+            image: "https://i.pravatar.cc/100?img=2",
+        },
+        {
+            id: "PT-002",
+            patient: "Michael Lee",
+            phone: "+234 803 111 2222",
+            department: "Neurology",
+            doctor: "Dr. David",
+            time: "2026-05-20",
+            status: "In Progress",
+            image: "https://i.pravatar.cc/100?img=2",
+        },
     ];
 
 
@@ -100,7 +140,7 @@ const page = () => {
                         className="font-bold text-2xl"
                         style={{ color: theme.colors.primary }}
                     >
-                        Appointment{" "}
+                        Patient Records{" "}
                     </h2>
                     <div className="flex items-center gap-4">
                         <Icon
@@ -136,20 +176,7 @@ const page = () => {
                             className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm"
                         >
                             <div className="flex items-center gap-4">
-                                <div
-                                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                                    style={{
-                                        background: `${theme.colors.primary}15`,
-                                    }}
-                                >
-                                    <Icon
-                                        icon={item.icon}
-                                        width="24"
-                                        height="24"
-                                        color={theme.colors.primary}
-                                    />
-                                </div>
-
+                              
                                 <div className="flex flex-col">
                                     <p className="text-sm text-gray-500">
                                         {item.title}
@@ -168,6 +195,7 @@ const page = () => {
                     ))}
                 </div>
             </div>
+
             <div className="p-6">
                 <div className="mt-6 border border-gray-300 rounded-2xl bg-white overflow-hidden">
                     <div className="overflow-x-auto">
@@ -248,7 +276,7 @@ const page = () => {
                         </table>
                     </div>
 
-                    <div className="flex items-center justify-between px-6 py-4 border-t border-gray-200 bg-[#eef5eb]">
+                    <div className="flex items-center justify-between px-6 py-4 border-t border-gray-200 bg-[#eef5eb] ">
                         <p className="text-sm text-gray-500">
                             Showing{" "}
                             <span className="font-semibold text-gray-900">

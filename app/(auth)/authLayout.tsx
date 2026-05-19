@@ -1,4 +1,4 @@
-import { AuthWrapper } from "@/components/layout/AuthWrapper";
+import { AuthWrapper } from "@/app/components/layout/AuthWrapper";
 
 export default function AuthLayout({
     children,
